@@ -1,0 +1,437 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f1f5f9;
+
+    color: #1e293b;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header {
+
+    background: linear-gradient(
+        135deg,
+        #535454,
+        #1e40af
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+header h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+
+header p {
+
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+
+/* Main Container */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 35px auto;
+
+    flex: 1;
+}
+
+
+/* Common Section */
+
+.form-section,
+.student-section {
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-section h2,
+.student-section h2 {
+
+    margin-bottom: 25px;
+
+    color: #1e3a8a;
+}
+
+
+/* Form */
+
+#studentForm {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-group label {
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group input,
+.form-group select {
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+
+/* Buttons */
+
+.button-group {
+
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+
+.add-btn,
+.cancel-btn {
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.add-btn {
+
+    background-color: #2563eb;
+
+    color: white;
+}
+
+
+.add-btn:hover {
+
+    background-color: #1d4ed8;
+}
+
+
+.cancel-btn {
+
+    background-color: #64748b;
+
+    color: white;
+
+    display: none;
+}
+
+
+.cancel-btn:hover {
+
+    background-color: #475569;
+}
+
+
+/* Student Header */
+
+.student-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.student-header h2 {
+
+    margin-bottom: 0;
+}
+
+
+#studentCount {
+
+    background-color: #dbeafe;
+
+    color: #4f5053;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+/* Search */
+
+.search-box {
+
+    margin-bottom: 20px;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.search-box input:focus {
+
+    border-color: #2563eb;
+}
+
+
+/* Table */
+
+.table-container {
+
+    overflow-x: auto;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+thead {
+
+    background-color: #1e3a8a;
+
+    color: white;
+}
+
+
+th,
+td {
+
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+tbody tr:hover {
+
+    background-color: #f8fafc;
+}
+
+
+/* Action Buttons */
+
+.edit-btn,
+.delete-btn {
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+}
+
+
+.edit-btn {
+
+    background-color: #f59e0b;
+
+    color: white;
+}
+
+
+.edit-btn:hover {
+
+    background-color: #d97706;
+}
+
+
+.delete-btn {
+
+    background-color: #ef4444;
+
+    color: white;
+}
+
+
+.delete-btn:hover {
+
+    background-color: #dc2626;
+}
+
+
+/* Empty Message */
+
+#emptyMessage {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #64748b;
+
+    display: none;
+}
+
+
+/* Footer */
+
+footer {
+
+    background-color: #0f172a;
+
+    color: rgb(72, 70, 70);
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+
+    header h1 {
+
+        font-size: 28px;
+    }
+
+
+    #studentForm {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .button-group {
+
+        grid-column: auto;
+    }
+
+
+    .student-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    th,
+    td {
+
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+}

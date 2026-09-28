@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>🎓 Student Management Dashboard</h1>
+
+        <p>Manage student information easily</p>
+
+    </header>
+
+
+    <!-- Main Container -->
+
+    <main class="container">
+
+
+        <!-- Add Student Section -->
+
+        <section class="form-section">
+
+            <h2 id="formTitle">Add New Student</h2>
+
+
+            <form id="studentForm">
+
+                <div class="form-group">
+
+                    <label for="studentName">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentCourse">
+                        Course
+                    </label>
+
+                    <select id="studentCourse" required>
+
+                        <option value="">
+                            Select Course
+                        </option>
+
+                        <option value="CSE">
+                            Computer Science Engineering
+                        </option>
+
+                        <option value="ISE">
+                            Information Science Engineering
+                        </option>
+
+                        <option value="ECE">
+                            Electronics & Communication
+                        </option>
+
+                        <option value="ME">
+                            Mechanical Engineering
+                        </option>
+
+                        <option value="CV">
+                            Civil Engineering
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="studentPhone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="button-group">
+
+                    <button
+                        type="submit"
+                        class="add-btn"
+                        id="submitButton">
+                        Add Student
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        id="cancelButton"
+                        onclick="cancelEdit()">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Student List Section -->
+
+        <section class="student-section">
+
+            <div class="student-header">
+
+                <h2>Student List</h2>
+
+                <span id="studentCount">
+                    Students: 0
+                </span>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search student by name, email or course..."
+                >
+
+            </div>
+
+
+            <!-- Student Table -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Course</th>
+
+                            <th>Phone</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentTableBody">
+
+                        <!-- Students will appear here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Empty Message -->
+
+            <p id="emptyMessage">
+                No students found.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Student Management Dashboard | Created by Thejas SP
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
